@@ -1,0 +1,244 @@
+$primary-color: #00098a;
+$light-primary-color: #0011ff;
+$secondary-color: #ffffff;
+$third-color: #dbdbdb;
+$gradiaent: radial-gradient(circle, $third-color, $secondary-color);
+$gradiaent3: radial-gradient(circle, #e5ff00, #bcd100);
+$gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
+
+.App {
+  height: 100%;
+  width: 100%;
+  background-image: $gradiaent2;
+
+  section {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+
+  #projects,
+  #about,
+  #contact {
+    width: 100%;
+    height: 100%;
+    background-image: $gradiaent;
+    color: $primary-color;
+  }
+
+  #skills,
+  #why {
+    background-image: $gradiaent2;
+    .title {
+      color: $secondary-color;
+    }
+  }
+
+  #hero {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+
+    .lang {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 2rem;
+      justify-content: center;
+
+      button {
+        border: 0px solid white;
+        background-color: transparent;
+        color: $secondary-color;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          color: $third-color;
+        }
+      }
+
+
+
+    }
+
+    nav {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 2rem;
+      height: 6rem;
+      width: 10rem;
+      justify-content: center;
+
+      a {
+        margin: 1rem;
+        transition: all 0.2s ease-in;
+        text-decoration: none;
+        color: $secondary-color;
+        font-size: 2rem;
+
+        &:hover {
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .container {
+      width: 100%;
+      font-size: 2.5rem;
+      text-align: left;
+      color: white;
+
+      .name {
+        background-image: $gradiaent3;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  #projects {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-block: 20px;
+
+      .project {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        #project-title {
+          font-weight: 600;
+        }
+
+        .container {
+          display: flex;
+          flex-direction: row;
+          gap: 50px;
+
+          .details {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 25rem;
+          }
+
+          a {
+            text-decoration: none;
+            button {
+              border-radius: 5px;
+              height: 3rem;
+              width: 6rem;
+              font-size: 20px;
+              background-color: $primary-color;
+              cursor: pointer;
+              color: $secondary-color;
+              border-width: 0;
+            }
+
+            button:hover {
+              background-color: $light-primary-color;
+            }
+          }
+
+          img {
+            width: 600px;
+          }
+        }
+      }
+    }
+  }
+
+  #skills {
+    .container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      gap: 50px;
+
+      p {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  #about {
+    p {
+      width: 80%;
+      font-size: 20px;
+    }
+  }
+
+  #why {
+    color: $secondary-color;
+  }
+
+  #contact {
+    .container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content:space-evenly;
+
+      i {
+        font-size: 50px;
+        color: $primary-color;
+
+        &:hover{
+          color: $light-primary-color;
+        }
+      }
+
+     
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  #hero {
+    .container {
+      max-width: 540px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #hero {
+    .container {
+      max-width: 720px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #hero {
+    .container {
+      max-width: 960px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  #hero {
+    .container {
+      max-width: 1140px;
+    }
+  }
+}
