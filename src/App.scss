@@ -66,12 +66,9 @@ $gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
           color: $third-color;
         }
       }
-
-
-
     }
 
-    nav {
+    .contacts {
       display: flex;
       position: absolute;
       top: 0;
@@ -104,6 +101,25 @@ $gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
         background-image: $gradiaent3;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+      }
+
+      .navbar {
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+
+        a {
+          background-color: $secondary-color;
+          color: $light-primary-color;
+          font-weight: 700;
+          padding: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $third-color;
+          }
+        }
       }
     }
   }
@@ -173,6 +189,10 @@ $gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
       width: 80%;
       gap: 50px;
 
+      img {
+        height: 100px;
+      }
+
       p {
         color: $secondary-color;
       }
@@ -195,50 +215,84 @@ $gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content:space-evenly;
+      justify-content: space-evenly;
 
       i {
         font-size: 50px;
         color: $primary-color;
 
-        &:hover{
+        &:hover {
           color: $light-primary-color;
         }
       }
-
-     
     }
   }
 }
 
-@media (min-width: 576px) {
-  #hero {
-    .container {
-      max-width: 540px;
+@media (max-width: 576px) {
+  .App {
+
+    .title {
+      font-size: 2rem;
+    }
+
+    #hero {
+      .container {
+        max-width: 540px;
+
+        font-size: 1.5rem;
+        .navbar {
+          justify-content: center;
+          max-width: 540px;
+          column-gap: 10px;
+          font-size: 12px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+
+    #projects {
+      .container {
+        max-width: 100%;
+
+        .project {
+          .container {
+            flex-direction: column;
+            img {
+              width: 300px;
+            }
+          }
+        }
+      }
+    }
+
+    #skills {
+      .container {
+        img {
+          height: 85px;
+        }
+
+        p {
+          font-size: 0.75rem;
+        }
+
+      }
+    }
+
+    #about {
+      p{
+        font-size: 1rem;
+      }
+    }
+
+    #contact {
+      .container {
+        i {
+          font-size: 30px;
+        }
+      }
     }
   }
 }
 
-@media (min-width: 768px) {
-  #hero {
-    .container {
-      max-width: 720px;
-    }
-  }
-}
 
-@media (min-width: 992px) {
-  #hero {
-    .container {
-      max-width: 960px;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  #hero {
-    .container {
-      max-width: 1140px;
-    }
-  }
-}

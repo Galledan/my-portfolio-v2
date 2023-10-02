@@ -1,5 +1,7 @@
 import "./App.scss";
 import Rotate from "react-reveal/Rotate";
+import Fade from "react-reveal/Fade";
+import { Link } from "react-scroll";
 import { useTranslation } from "react-i18next";
 
 function App() {
@@ -125,7 +127,7 @@ function App() {
             EN
           </button>
         </div>
-        <nav>
+        <nav className="contacts">
           <a
             href="https://www.linkedin.com/in/onur-çelikler/"
             rel="noopener noreferrer"
@@ -141,7 +143,7 @@ function App() {
             <i className="fab fa-github"></i>
           </a>
           <a
-            href="https://drive.google.com/file/d/1SD4wdFZ-soj0EDLyLb1mW3SPms1_emz1/view?usp=sharing"
+            href={t('cv')}
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -156,107 +158,125 @@ function App() {
               <br />
               {t("im")}
             </h1>
+            <nav className="navbar">
+              <Link to="projects" smooth={true} duration={500}>
+                {t("projects")}
+              </Link>
+              <Link to="skills" smooth={true} duration={500}>
+                {t("skill")}
+              </Link>
+              <Link to="about" smooth={true} duration={500}>
+                {t("about")}
+              </Link>
+              <Link to="why" smooth={true} duration={500}>
+                {t("why")}
+              </Link>
+              <Link to="contact" smooth={true} duration={500}>
+                {t("contact")}
+              </Link>
+            </nav>
           </div>
         </Rotate>
       </section>
 
       <section id="projects">
-        <h2 className="title">{t("projects")}</h2>
-        <Rotate bottom left>
-        <div className="container">
-          {projects.map((p, i) => (
-            <div className="project" id={"project-" + (i + 1)}>
-              <span id="project-title">{p.name}</span>
-              <div className="container">
-                <img src={p.image} alt={i} />
-                <div className="details">
-                  <span className="desc">{p.desc}</span>
-                  <span className="tech">
-                    {t("tech")} {p.tech}
-                  </span>
-                  <div className="buttons">
-                    {p.github !== "" && (
+        <Fade>
+          <h2 className="title">{t("projects")}</h2>
+
+          <div className="container">
+            {projects.map((p, i) => (
+              <div className="project" id={"project-" + (i + 1)}>
+                <span id="project-title">{p.name}</span>
+                <div className="container">
+                  <img src={p.image} alt={i} />
+                  <div className="details">
+                    <span className="desc">{p.desc}</span>
+                    <span className="tech">
+                      {t("tech")} {p.tech}
+                    </span>
+                    <div className="buttons">
+                      {p.github !== "" && (
+                        <a
+                          className="link"
+                          href={p.github}
+                          rel="noopener noreferrer"
+                          target="_blank"
+                        >
+                          <button>Github</button>{" "}
+                        </a>
+                      )}
                       <a
                         className="link"
-                        href={p.github}
+                        href={p.live}
                         rel="noopener noreferrer"
                         target="_blank"
                       >
-                        <button>Github</button>{" "}
+                        <button>{t("canlı")}</button>
                       </a>
-                    )}
-                    <a
-                      className="link"
-                      href={p.live}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <button>{t("canlı")}</button>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-        </Rotate>
+            ))}
+          </div>
+        </Fade>
       </section>
 
       <section id="skills">
         <h2 className="title">{t("skill")}</h2>
-        <Rotate>
-        <div className="container">
-          {skills.map((s, i) => (
-            <di id={i} className={"skill-" + i}>
-              <img height={100} src={s.img} alt={s.name} />
-              <p>{s.name}</p>
-            </di>
-          ))}
-        </div>
-        </Rotate>
+        <Fade>
+          <div className="container">
+            {skills.map((s, i) => (
+              <di id={i} className={"skill-" + i}>
+                <img src={s.img} alt={s.name} />
+                <p>{s.name}</p>
+              </di>
+            ))}
+          </div>
+        </Fade>
       </section>
 
       <section id="about">
-      <Rotate>
-        <h2 className="title">{t("about")}</h2>
-        <p>{t("about-text")}</p>
-        </Rotate>
+        <Fade>
+          <h2 className="title">{t("about")}</h2>
+          <p>{t("about-text")}</p>
+        </Fade>
       </section>
 
       <section id="why">
-      <Rotate>
-        <h2 className="title">{t("why")}</h2>
-        <p>{t("why-text")}</p>
-        </Rotate>
+        <Fade>
+          <h2 className="title">{t("why")}</h2>
+          <p>{t("why-text")}</p>
+        </Fade>
       </section>
 
       <section id="contact">
-      <Rotate>
-        <h2 className="title">{t("contact")}</h2>
-        <div className="container">
-          <a
-            href="https://www.linkedin.com/in/onur-çelikler/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/Galledan"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i className="fab fa-github"></i>
-          </a>
-          <a
-            href="mailto:onrclklr@outlook.com"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i className="fas fa-envelope"></i>
-          </a>
-        </div>
-        </Rotate>
+        <Fade>
+          <h2 className="title">{t("contact")}</h2>
+          <div className="container">
+            <a
+              href="https://www.linkedin.com/in/onur-çelikler/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Galledan"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+            <a
+              href="mailto:onrclklr@outlook.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <i className="fas fa-envelope"></i>
+            </a>
+          </div>
+        </Fade>
       </section>
     </div>
   );
