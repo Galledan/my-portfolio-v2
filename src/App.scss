@@ -92,7 +92,7 @@ $gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
     }
 
     .container {
-      width: 100%;
+      width: 60%;
       font-size: 2.5rem;
       text-align: left;
       color: white;
@@ -239,6 +239,7 @@ $gradiaent2: radial-gradient(circle, $light-primary-color, $primary-color);
     #hero {
       .container {
         max-width: 540px;
+        width: 100%;
 
         font-size: 1.5rem;
         .navbar {
