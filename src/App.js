@@ -13,6 +13,22 @@ function App() {
 
   const projects = [
     {
+      name: "Ticket Management System",
+      github: "https://github.com/Galledan/Patika_Fimple_React_Bootcamp_FinalCase",
+      live: "https://patika-fimple-react-bootcamp-final-case.vercel.app/basvuru-olustur",
+      image: require("./assets/ticket.webp"),
+      desc: t("ticket"),
+      tech: "React, React Hooks, React Router, Context API, Axios, JWT Formik, Yup",
+    },
+    {
+      name: "Hearthstone Pack Simulator",
+      github: "https://github.com/Galledan/hspacksimulator",
+      live: "https://hspacksimulator.vercel.app/",
+      image: require("./assets/hspack.webp"),
+      desc: t("hspack"),
+      tech: "React, Context API, Axios",
+    },
+    {
       name: "Trendyol Süper Lig",
       github: "https://github.com/Galledan/superlig",
       live: "https://superlig.netlify.app",
