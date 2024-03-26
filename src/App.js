@@ -13,11 +13,43 @@ function App() {
 
   const projects = [
     {
-      name: "Ticket Management System",
+      name: "Rito Client",
+      github: "https://github.com/Galledan/nextjs-rito-client",
+      live: "https://nextjs-rito-client.vercel.app/",
+      image: require("./assets/rito.webp"),
+      desc: t("rito"),
+      tech: "NextJS, Tailwindcss, Typescript, Prisma, MongoDB, React Hooks, NextAuth, Axios, Lodash, Bcrypt, React Icons, Swr ",
+    },
+    {
+      name: "Netflix Clone",
+      github: "https://github.com/Galledan/nextjs-netflix-clone",
+      live: "https://nextjs-netflix-clone-sepia.vercel.app/",
+      image: require("./assets/netflix.webp"),
+      desc: t("netflix"),
+      tech: "NextJS, Tailwindcss, Typescript, Prisma, MongoDB, React Hooks, NextAuth, Axios, Lodash, Bcrypt, React Icons, Swr",
+    },
+    {
+      name: "X(Twitter) Clone",
+      github: "https://github.com/Galledan/nextjs-x-clone",
+      live: "https://nextjs-x-clone.vercel.app/r",
+      image: require("./assets/x.webp"),
+      desc: t("x"),
+      tech: "NextJS, Tailwindcss, Typescript, Prisma, MongoDB, React Hooks,React Hot Toast, React Dropzone, NextAuth, Axios, Bcrypt, React Icons, Zustand, Swr",
+    },
+    {
+      name: "Car Rental",
+      github: "https://github.com/Galledan/nextjs-car-showroom",
+      live: "https://nextjs-car-showroom.vercel.app/",
+      image: require("./assets/carhub.webp"),
+      desc: t("carhub"),
+      tech: "NextJS, Tailwindcss, Typescript, HeadlessUI, Cars API, IMAGIN API",
+    },
+    {
+      name: "Youtube UI Clone",
       github: "https://github.com/Galledan/Patika_Fimple_React_Bootcamp_FinalCase",
       live: "https://patika-fimple-react-bootcamp-final-case.vercel.app/basvuru-olustur",
       image: require("./assets/ticket.webp"),
-      desc: t("ticket"),
+      desc: t("youtubet"),
       tech: "React, React Hooks, React Router, Context API, Axios, JWT Formik, Yup",
     },
     {
@@ -204,7 +236,7 @@ function App() {
               <div className="project" id={"project-" + (i + 1)}>
                 <span id="project-title">{p.name}</span>
                 <div className="container">
-                  <img src={p.image} alt={i} />
+                  <img src={p.image} alt={p.title} />
                   <div className="details">
                     <span className="desc">{p.desc}</span>
                     <span className="tech">

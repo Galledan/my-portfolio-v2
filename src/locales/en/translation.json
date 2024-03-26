@@ -2,6 +2,11 @@
     "hi": "Hi, I'm",
     "im": "I'm a front-end developer.",
     "projects": "PROJECTS",
+    "rito":"Riot Games client clone for practicing NextJS",
+    "netflix":"Netflix clone for practicing NextJS",
+    "x":"X(Twitter) clone for practicing NextJS",
+    "carhub":"Car rental website project for practicing NextJS",
+    "youtube":"Youtube mobile UI clone for practicing React Native",
     "ticket": "Final project of the bootcamp given by Fimple and Patika",
     "hspack": "A pack simulation website by using Hearthstone cards",
     "super": "Concept website for Turkish Super League.",
@@ -17,5 +22,5 @@
     "why": "WHY ME",
     "why-text": "All I aim is to improve myself and be better at my job. I like to work with teams and I can fit any team easily. I lack experience so I am passionate about gaining experience and improve myself.",
     "contact": "CONTACT ME",
-    "cv": "https://drive.google.com/file/d/1SD4wdFZ-soj0EDLyLb1mW3SPms1_emz1/view?usp=sharing" 
+    "cv": "https://drive.google.com/file/d/1A5mGNJZFoQaO0W7dxmxbbYmCCPGgNpFL/view?usp=drive_link" 
 }
